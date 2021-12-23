@@ -1,7 +1,6 @@
 import { Router } from 'express'
+import { itemsRouter } from './items.routes'
 
 export const routes = Router()
 
-routes.get('/', (request, response) => {
-  return response.json({ message: "oi" })
-})
+routes.use('/items', itemsRouter)
